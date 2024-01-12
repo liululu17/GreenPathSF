@@ -197,7 +197,7 @@ import geopandas as gpd
 import matplotlib.pyplot as plt
 
 # Path to your output shapefile
-shapefile_path = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_Sample_100m.shp'
+shapefile_path = 'your_path'
 
 # Load the shapefile
 gdf = gpd.read_file(shapefile_path)
