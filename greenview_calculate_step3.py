@@ -24,6 +24,8 @@ Original file is located at
 # Copyright(C) Xiaojiang Li, Ian Seiferling, Marwa Abdulhai, Senseable City Lab, MIT
 # First version June 18, 2014
 
+# This version is adjusted by Lulu Liu, UCB (12/2023)
+
 pip install pymeanshift
 
 import pymeanshift as pms
@@ -188,7 +190,7 @@ def get_session_token(api_key):
         raise ValueError("JSON response does not contain 'session'")
 
 # Use your actual API key here
-api_key = 'AIzaSyCQK2kHnjSheJ4n7evElFJMTij9xqzMLzg'
+api_key = 'your_Key'
 session_token = get_session_token(api_key)
 print(session_token)
 
@@ -264,9 +266,9 @@ def calculate_gvi_and_save_to_csv(txt_file, key_file, session_token, output_csv,
 from google.colab import drive
 drive.mount('/content/drive/')
 
-txt_file='/content/drive/MyDrive/C257 Project/Data/Metadata/SFDT_Metadata9.txt'
-key_file='/content/drive/MyDrive/C257 Project/Data/Keyfile.txt'
-output_csv = '/content/drive/MyDrive/C257 Project/Data/GVI_Output_CSV/output_results9.csv'
+txt_file='txtfile_in_metadata'
+key_file='keyfile'
+output_csv = 'output_path'
 non_winter_months = ['03','04', '05', '06', '07', '08', '09','10','11']
 calculate_gvi_and_save_to_csv(txt_file, key_file, session_token,output_csv,non_winter_months)
 
