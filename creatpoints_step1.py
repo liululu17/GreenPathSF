@@ -70,8 +70,8 @@ def convert_to_wgs84(input_shp, output_shp):
     data.to_file(output_shp)
 
 # Usage
-input_shp_2 = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_DT_Clean2_P.shp'
-output_shp_2 = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_DT_Clean2_WGS.shp'
+input_shp_2 = 'your_path'
+output_shp_2 = your_path'
 convert_to_wgs84(input_shp_2, output_shp_2)
 
 converted_data = gpd.read_file('/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_DT_Clean2_WGS.shp')
