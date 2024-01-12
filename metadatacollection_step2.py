@@ -17,7 +17,7 @@ drive.mount('/content/drive/')
 import geopandas as gpd
 
 # Load your shapefile
-shapefile_path = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_Sample_50m.shp'  # Replace with the path to your shapefile
+shapefile_path = 'your_path'  # Replace with the path to your shapefile
 gdf = gpd.read_file(shapefile_path)
 
 # Print the first few rows of the DataFrame to inspect the data
@@ -45,7 +45,7 @@ print(f"Number of unique points: {len(unique_points)}")
 gdf_unique = gdf.drop_duplicates(subset=['geometry'])
 
 # Save the unique points to a new shapefile
-unique_shapefile_path = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_Sample_50m_Clean.shp'  # Replace with your desired path
+unique_shapefile_path = 'newshp_path'  # Replace with your desired path
 gdf_unique.to_file(unique_shapefile_path)
 
 print(f"Original number of points: {len(gdf)}")
@@ -76,7 +76,7 @@ def get_session_token(api_key):
         raise ValueError("JSON response does not contain 'session'")
 
 # Use your actual API key here
-api_key = 'AIzaSyC6SI5E0xZd2txN1gUtGo52CYKpOlXBRSU'
+api_key = 'your_key'
 session_token = get_session_token(api_key)
 print(session_token)  # This should now print the correct session token
 
@@ -109,12 +109,12 @@ def get_pano_metadata(pano_id, session_token, api_key):
     return response.json()
 
 # Load your shapefile
-shapefile_path = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_Sample_50m_Clean.shp'  # Replace with your actual shapefile path
+shapefile_path = 'your_path'  # Replace with your actual shapefile path
 gdf = gpd.read_file(shapefile_path)
 
 import requests
 
-output_dir = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/'  # Specify the directory where you want to save the files
+output_dir = 'your_path'  # Specify the directory where you want to save the files
 file_count = 1  # Initialize the file counter
 
 for index, row in gdf.iterrows():
@@ -148,10 +148,10 @@ print("Metadata collection complete.")
 import os
 
 # Define the directory where the original files are located
-input_dir = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/'
+input_dir = 'shp_path'
 
 # Define the directory where the converted files will be saved
-output_dir = '/content/drive/MyDrive/C257 Project/Data/Metadata/'
+output_dir = 'Metadata_path'
 
 # Ensure the output directory exists
 os.makedirs(output_dir, exist_ok=True)
