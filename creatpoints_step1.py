@@ -9,6 +9,7 @@ Original file is located at
 
 pip install fiona pandas
 
+# if you are not using colaboratory, just delet it
 from google.colab import drive
 drive.mount('/content/drive/')
 
@@ -47,8 +48,8 @@ def convert_encoding(input_shp, output_shp, original_encoding='utf-8', target_en
             dest.write(new_feature)
 
 # Usage
-input_shp_1 = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_DT_Clean2.shp'
-output_shp_1 = '/content/drive/MyDrive/C257 Project/Data/SFDT_shp/SF_DT_CL2/SF_DT_Clean2_P.shp'
+input_shp_1 = 'your_path'
+output_shp_1 = 'your_path'
 convert_encoding(input_shp_1, output_shp_1)
 
 import geopandas as gpd
